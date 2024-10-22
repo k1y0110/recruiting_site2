@@ -1,0 +1,333 @@
+body{
+    font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+}
+.font-en{
+    font-family: "Montserrat", sans-serif;
+}
+.pc-item{
+    display: none;
+}
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    background-color: #fff;
+    padding: 0 1.25% 0 3%;
+    &-logo{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        &-img{
+            width: 35px;
+            height: 35px;
+        }
+        &-txt{
+            display: flex;
+            padding-left: 5px;
+            font-size: .6rem;
+            font-weight: 200;
+            letter-spacing: .2rem;
+            p{
+                padding-left: .6rem;
+                color: #0079c0;
+            }
+        }
+    }
+    &-recruit, &-nav{
+        display: none;
+    }
+}
+.burgerbtn{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    &-line{
+        position: absolute;
+        height: 1px;
+        background-color: #0079c0;
+        &:first-of-type{
+            top: 16.5px;
+            right: 12.5px;
+            width: 20px;
+        }
+        &:nth-of-type(2){
+            top: 24.5px;
+            right: 12.5px;
+            width: 25px;
+        }
+        &:last-of-type{
+            bottom: 16.5px;
+            right: 12.5px;
+            width: 20px;
+        }
+    }
+}
+.fv{
+    color: #fff;
+    &-wrapper{
+        position: relative;
+        height: 100vh;
+    }
+    &-ttl{
+        position: absolute;
+        bottom: 44%;
+        left: 2.75rem;
+        z-index: 20;
+        font-size: 1.4rem;
+        letter-spacing: .25rem;
+        font-weight: 500;
+        line-height: 1.7;
+    }
+    &-person{
+        position: absolute;
+        z-index: 20;
+        width: 6.5rem;
+        bottom: 21.5%;
+        right: 2.7rem;
+        path{
+            fill: #fff;
+        }
+    }
+    &-border{
+        position: absolute;
+        z-index: 20;
+        right: 0;
+        bottom: 16%;
+        width: 2rem;
+        height: 1px;
+        background-color: #fff;
+    }
+    &-txt{
+        position: absolute;
+        z-index: 20;
+        bottom: 10.5%;
+        right: 2.8rem;
+        font-size: .85rem;
+        letter-spacing: .1rem;
+    }
+    &-swiper{
+        height: 100%;
+        overflow: hidden;
+        &-slide{
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &-slide{
+        &-txt{
+            position: absolute;
+            font-family: "Zen Kurenaido", serif;
+            bottom: 14%;
+            right: 2.9rem;
+            font-size: 1.1rem;
+        }
+        &-name{
+            position: absolute;
+            bottom: 5%;
+            right: 2.85rem;
+            font-size: .55rem;
+            font-weight: 300;
+            letter-spacing: .15rem;
+        }
+    }
+}
+.swiper-slide{
+    img{
+        opacity: 0;
+        transform: scaleX(.3);
+        transition: 1.2s;
+    }
+    h3,p{
+        opacity: 0;
+        transform: scaleY(0);
+        transition: .5s;
+    }
+    &-active{
+        img{
+            opacity: 1;
+            transform: scaleX(1);
+            transition: .5s;
+        }
+        h3,p{
+            opacity: 1;
+            transform: scaleY(1);
+        }
+        h3{
+            transition: 2s;
+        }
+        p{
+            transition: 2.2s;
+        }
+    }
+}
+.swiper-pagination{
+    display: none;
+}
+.info{
+    display: none;
+}
+.message{
+    display: none;
+}
+.about{
+    display: none;
+}
+.person{
+    display: none;
+}
+.crosstalk{
+    display: none;
+}
+.culture{
+    display: none;
+}
+.entry{
+    display: none;
+}
+.footer{
+    display: none;
+}
+
+@media screen and (min-width:1025px) {
+    .pc-item{
+        display: block;
+    }
+    .sp-item{
+        display: none;
+    }
+    .header{
+        height: 95px;
+        padding-left: 4%;
+        &-logo{
+            &-img{
+                height: 60px;
+                width: 60px;
+            }
+            &-txt{
+                font-size: .8rem;
+                letter-spacing: .5rem;
+                font-weight: 300;
+            }
+        }
+    }
+    .burgerbtn{
+        display: none;
+    }
+    .fv{
+        &-ttl{
+            font-size: 2.2rem;
+            left: 9.75rem;
+            bottom: 42%;
+            letter-spacing: .4rem;
+        }
+        &-person{
+            width: 11rem;
+            bottom: 31.75%;
+            right: 3.75rem;
+        }
+        &-border{
+            bottom: 25.2%;
+            width: 3.5rem;
+        }
+        &-txt{
+            bottom: 23.5%;
+            right: 4rem;
+            font-size: 1.4rem;
+        }
+        &-swiper{
+            height: 100vh;
+            &-slide{
+                img{
+                    max-height: 100vh;
+                    height: auto;
+                    object-fit: contain;
+                    object-position: top;
+                }
+            }
+        }
+        &-slide{
+            &-txt{
+                bottom: 23.5%;
+                right: 13rem;
+                font-size: 2rem;
+                letter-spacing: .4rem;
+            }
+            &-name{
+                right: 4.7rem;
+                bottom: 18%;
+                font-size: .85rem;
+            }
+        }
+    }
+
+    .swiper{
+        &-slide{
+            img{
+                transition: 2s;
+                transform: none;
+            }
+            &-active{
+                img{
+                    transition: 1s;
+                    transform: none;
+                }
+                h3{
+                    transition: 1s;
+                }
+                p{
+                    transition: 1.2s;
+                }
+            }
+        }
+        &-pagination{
+            display: block;
+            left: initial !important;
+            transform: initial !important;
+            right: .8rem;
+            bottom: 8.2% !important;
+            &-bullet{
+                width: 10px !important;
+                height: 10px !important;
+                margin: 8px !important;
+                opacity: 1 !important;
+                background-color: #C6C6C6;
+                transition: .5s;
+                &::after{
+                    content: "";
+                    position: relative;
+                    display: block;
+                    left: -4px;
+                    bottom: 4px;
+                    border-radius: 15px;
+                    width: 18px;
+                    height: 18px;
+                    background-color: #0279C050;
+                    transition: .5s;
+                    transform: scale(.1);
+                    opacity: 0;
+                }
+                &:hover::after{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                &-active{
+                    background-color: #0279C0;
+                    pointer-events: none;
+                    transition: 1s;
+                    &::after{
+                        content: "";
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}

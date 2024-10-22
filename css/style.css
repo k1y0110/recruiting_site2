@@ -1,0 +1,367 @@
+body {
+  font-family: YakuHanJP, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+}
+
+.font-en {
+  font-family: "Montserrat", sans-serif;
+}
+
+.pc-item {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 100;
+  background-color: #fff;
+  padding: 0 1.25% 0 3%;
+}
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+.header-logo-img {
+  width: 35px;
+  height: 35px;
+}
+.header-logo-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 5px;
+  font-size: 0.6rem;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+}
+.header-logo-txt p {
+  padding-left: 0.6rem;
+  color: #0079c0;
+}
+.header-recruit, .header-nav {
+  display: none;
+}
+
+.burgerbtn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.burgerbtn-line {
+  position: absolute;
+  height: 1px;
+  background-color: #0079c0;
+}
+.burgerbtn-line:first-of-type {
+  top: 16.5px;
+  right: 12.5px;
+  width: 20px;
+}
+.burgerbtn-line:nth-of-type(2) {
+  top: 24.5px;
+  right: 12.5px;
+  width: 25px;
+}
+.burgerbtn-line:last-of-type {
+  bottom: 16.5px;
+  right: 12.5px;
+  width: 20px;
+}
+
+.fv {
+  color: #fff;
+}
+.fv-wrapper {
+  position: relative;
+  height: 100vh;
+}
+.fv-ttl {
+  position: absolute;
+  bottom: 44%;
+  left: 2.75rem;
+  z-index: 20;
+  font-size: 1.4rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.fv-person {
+  position: absolute;
+  z-index: 20;
+  width: 6.5rem;
+  bottom: 21.5%;
+  right: 2.7rem;
+}
+.fv-person path {
+  fill: #fff;
+}
+.fv-border {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  bottom: 16%;
+  width: 2rem;
+  height: 1px;
+  background-color: #fff;
+}
+.fv-txt {
+  position: absolute;
+  z-index: 20;
+  bottom: 10.5%;
+  right: 2.8rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+}
+.fv-swiper {
+  height: 100%;
+  overflow: hidden;
+}
+.fv-swiper-slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.fv-slide-txt {
+  position: absolute;
+  font-family: "Zen Kurenaido", serif;
+  bottom: 14%;
+  right: 2.9rem;
+  font-size: 1.1rem;
+}
+.fv-slide-name {
+  position: absolute;
+  bottom: 5%;
+  right: 2.85rem;
+  font-size: 0.55rem;
+  font-weight: 300;
+  letter-spacing: 0.15rem;
+}
+
+.swiper-slide img {
+  opacity: 0;
+  -webkit-transform: scaleX(0.3);
+          transform: scaleX(0.3);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+.swiper-slide h3, .swiper-slide p {
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.swiper-slide-active img {
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.swiper-slide-active h3, .swiper-slide-active p {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+.swiper-slide-active h3 {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+.swiper-slide-active p {
+  -webkit-transition: 2.2s;
+  transition: 2.2s;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.info {
+  display: none;
+}
+
+.message {
+  display: none;
+}
+
+.about {
+  display: none;
+}
+
+.person {
+  display: none;
+}
+
+.crosstalk {
+  display: none;
+}
+
+.culture {
+  display: none;
+}
+
+.entry {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .pc-item {
+    display: block;
+  }
+  .sp-item {
+    display: none;
+  }
+  .header {
+    height: 95px;
+    padding-left: 4%;
+  }
+  .header-logo-img {
+    height: 60px;
+    width: 60px;
+  }
+  .header-logo-txt {
+    font-size: 0.8rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+  }
+  .burgerbtn {
+    display: none;
+  }
+  .fv-ttl {
+    font-size: 2.2rem;
+    left: 9.75rem;
+    bottom: 42%;
+    letter-spacing: 0.4rem;
+  }
+  .fv-person {
+    width: 11rem;
+    bottom: 31.75%;
+    right: 3.75rem;
+  }
+  .fv-border {
+    bottom: 25.2%;
+    width: 3.5rem;
+  }
+  .fv-txt {
+    bottom: 23.5%;
+    right: 4rem;
+    font-size: 1.4rem;
+  }
+  .fv-swiper {
+    height: 100vh;
+  }
+  .fv-swiper-slide img {
+    max-height: 100vh;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .fv-slide-txt {
+    bottom: 23.5%;
+    right: 13rem;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+  .fv-slide-name {
+    right: 4.7rem;
+    bottom: 18%;
+    font-size: 0.85rem;
+  }
+  .swiper-slide img {
+    -webkit-transition: 2s;
+    transition: 2s;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .swiper-slide-active img {
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .swiper-slide-active h3 {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .swiper-slide-active p {
+    -webkit-transition: 1.2s;
+    transition: 1.2s;
+  }
+  .swiper-pagination {
+    display: block;
+    left: initial !important;
+    -webkit-transform: initial !important;
+            transform: initial !important;
+    right: 0.8rem;
+    bottom: 8.2% !important;
+  }
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 8px !important;
+    opacity: 1 !important;
+    background-color: #C6C6C6;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .swiper-pagination-bullet::after {
+    content: "";
+    position: relative;
+    display: block;
+    left: -4px;
+    bottom: 4px;
+    border-radius: 15px;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(2, 121, 192, 0.3137254902);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  .swiper-pagination-bullet:hover::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #0279C0;
+    pointer-events: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .swiper-pagination-bullet-active::after {
+    content: "";
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
