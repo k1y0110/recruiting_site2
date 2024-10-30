@@ -6,7 +6,7 @@ const swiper = new Swiper('.fv-swiper',{
       disableOnInteraction: false,
   },
   effect: "creative",
-  speed: 1000,
+  speed: 1500,
   creativeEffect: {
       prev: {
         translate: ["-40%", 0, -1],
@@ -27,7 +27,7 @@ const swiper = new Swiper('.fv-swiper',{
         },
 
         effect: "creative",
-        speed: 1000,
+        speed: 1500,
         creativeEffect: {
           prev: {
             translate: ["-30%", 0, -1],
@@ -38,4 +38,17 @@ const swiper = new Swiper('.fv-swiper',{
         },
     }
   },
+});
+
+AOS.init();
+
+$(".burgerbtn").on("click",function(){
+  $('.burgerbtn-line').toggleClass('open');
+  $('.header-pc').toggleClass('open');
+});
+$(".header-nav-open").on("click",function(){
+  $('.header-nav-open').toggleClass('open');
+  $('.header-nav-hidden').toggleClass('open');
+  $('.header-nav-move').toggleClass('open');
+  $('.header-recruit').toggleClass('open');
 });
