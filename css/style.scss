@@ -9,6 +9,38 @@ body{
         transform: translate(0,0);
     }
 }
+@keyframes ml01-1{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes ml01-2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-200%);
+    }
+}
+@keyframes ml02-1{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+@keyframes ml02-2{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
 .font-en{
     font-family: "Montserrat", sans-serif;
 }
@@ -356,19 +388,76 @@ body{
             }
             a{
                 font-size: .75rem;
+                letter-spacing: .15rem;
                 p{
-                    color: #969696;
                     padding-bottom: 10px;
+                    color: #969696;
                 }
                 h3{
+                    color: #323232;
                     text-decoration: underline;
+                    font-weight: 300;
                 }
             }
         }
     }
 }
 .message{
-    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5px 0;
+    background-color: #EBEFF3;
+    &-loop{
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        padding: 30px 0;
+        &-wrapper{
+            display: flex;
+            opacity: .7;
+            svg{
+                height: 90px;
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &-txt{
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 17.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: .75rem;
+        letter-spacing: .1rem;
+        font-weight: 700;
+        line-height: 2.3;
+        text-align: center;
+        color: #0079c0;
+    }
+}
+.ml01{
+    div{
+        &:first-of-type{
+            animation: ml01-1 120s -60s linear infinite;
+        }
+        &:last-of-type{
+            animation: ml01-2 120s linear infinite;
+        }
+    }
+}
+.ml02{
+    div{
+        &:first-of-type{
+            animation: ml02-1 120s -60s linear infinite;
+        }
+        &:last-of-type{
+            animation: ml02-2 120s linear infinite;
+        }
+    }
 }
 .about{
     display: none;
@@ -673,6 +762,19 @@ body{
                     }
                 }
             }
+        }
+    }
+    .message{
+        &-loop{
+            &-wrapper{
+                svg{
+                    height: 180px;
+                }
+            }
+        }
+        &-txt{
+            top: 23.5%;
+            font-size: 1.25rem;
         }
     }
 }
