@@ -19,7 +19,7 @@ const swiper = new Swiper('.fv-swiper',{
   breakpoints: {
     1025: {
         pagination: {
-          el: ".swiper-pagination",
+          el: ".fv-swiper-pagination",
           clickable: true,
           type: 'bullets',
           dynamicBullets: true,
@@ -36,6 +36,29 @@ const swiper = new Swiper('.fv-swiper',{
             translate: ["0%", 0, 0],
           },
         },
+    }
+  },
+});
+
+const swiper2 = new Swiper('.person-swiper',{
+
+  pagination: {
+    el: ".person-swiper-pagination",
+    clickable: true,
+    type: 'bullets',
+    dynamicBullets: true,
+    dynamicMainBullets: 3,
+  },
+
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 10,
+
+  breakpoints: {
+    1025: {
+      centeredSlides: false,
+      spaceBetween: 0,
+        
     }
   },
 });
