@@ -890,11 +890,115 @@ body {
 }
 
 .crosstalk {
-  display: none;
+  position: relative;
+  margin-top: 120px;
+}
+.crosstalk::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: calc(100% - 110px);
+  background-color: #EBEFF3;
+}
+.crosstalk-wrapper {
+  position: relative;
+  width: 87.5%;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+.crosstalk-wrapper .more-view {
+  bottom: 0.5rem;
+}
+.crosstalk-img {
+  -webkit-box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+          box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+}
+.crosstalk-ttl {
+  position: absolute;
+  left: 0.6rem;
+  top: -2.5rem;
+  width: 7.5rem;
+  height: 7.1875rem;
+}
+.crosstalk-ttl path {
+  fill: #007EB9;
+}
+.crosstalk-txt {
+  display: block;
+  width: 90%;
+  max-width: 31.25rem;
+  margin: 0 auto;
+  line-height: 2;
+}
+.crosstalk-txt-ttl {
+  font-size: 0.9375rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.crosstalk-txt-word {
+  margin: 17px 0 30px;
+  font-size: 0.65rem;
+  letter-spacing: 0.1rem;
 }
 
 .culture {
-  display: none;
+  position: relative;
+  margin-top: 110px;
+}
+.culture::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  height: calc(100% - 80px);
+  background-color: #EBEFF3;
+}
+.culture-wrapper {
+  position: relative;
+  width: 87.5%;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+.culture-wrapper .more-view {
+  bottom: 0.5rem;
+}
+.culture-img {
+  -webkit-box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+          box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+}
+.culture-ttl {
+  position: absolute;
+  left: 2rem;
+  top: -3.65rem;
+  width: 8.4375rem;
+  height: 3.75rem;
+}
+.culture-ttl path {
+  fill: #007EB9;
+}
+.culture-txt {
+  display: block;
+  width: 90%;
+  max-width: 31.25rem;
+  margin: 0 auto;
+  line-height: 2;
+}
+.culture-txt-ttl {
+  font-size: 0.9375rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.culture-txt-word {
+  margin: 17px 0 30px;
+  font-size: 0.65rem;
+  letter-spacing: 0.1rem;
 }
 
 .entry {
@@ -1395,5 +1499,106 @@ body {
   }
   .person-label p {
     font-size: 0.75rem;
+  }
+  .crosstalk {
+    margin-top: 400px;
+    padding: 0 6.25%;
+  }
+  .crosstalk::before {
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 85%;
+    height: calc(100% - 90px);
+  }
+  .crosstalk-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+  .crosstalk-wrapper .more-view {
+    margin: 0;
+    bottom: 0;
+  }
+  .crosstalk-img {
+    margin-top: 75px;
+    width: 62.5%;
+    height: auto;
+  }
+  .crosstalk-ttl {
+    position: relative;
+    top: -3.5rem;
+    left: -1.25rem;
+    width: 16.5625rem;
+    height: 15.625rem;
+  }
+  .crosstalk-txt {
+    width: 31.5%;
+    max-width: none;
+    margin: 0;
+  }
+  .crosstalk-txt-ttl {
+    margin-top: -45px;
+    font-size: 1.4375rem;
+  }
+  .crosstalk-txt-word {
+    font-size: 0.9275rem;
+    margin-top: 30px;
+    line-height: 1.65;
+  }
+  .culture {
+    margin-top: 145px;
+    padding-left: 6.25%;
+  }
+  .culture::before {
+    top: 60px;
+    width: 85%;
+    height: calc(100% + 25px);
+  }
+  .culture-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+  .culture-wrapper .more-view {
+    margin: 0;
+    bottom: 0;
+  }
+  .culture-img {
+    width: 65%;
+    height: auto;
+  }
+  .culture-ttl {
+    position: relative;
+    top: -0.5rem;
+    left: -1.25rem;
+    width: 18.75rem;
+    height: 8.125rem;
+  }
+  .culture-txt {
+    width: 31.5%;
+    max-width: none;
+    margin: 0;
+  }
+  .culture-txt-ttl {
+    font-size: 1.4375rem;
+  }
+  .culture-txt-word {
+    font-size: 0.9275rem;
+    margin-top: 30px;
+    line-height: 1.65;
   }
 }/*# sourceMappingURL=style.css.map */

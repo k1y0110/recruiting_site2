@@ -727,10 +727,112 @@ body{
     color: #4479C0;
 }
 .crosstalk{
-    display: none;
+    position: relative;
+    margin-top: 120px;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: calc(100% - 110px);
+        background-color: $grey;
+    }
+    &-wrapper{
+        position: relative;
+        width: 87.5%;
+        max-width: 35rem;
+        margin: 0 auto;
+        .more-view{
+            bottom: .5rem;
+        }
+    }
+    &-img{
+        box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+    }
+    &-ttl{
+        position: absolute;
+        left: .6rem;
+        top: -2.5rem;
+        width: 7.5rem;
+        height: 7.1875rem;
+        path{
+            fill: $ttl;
+        }
+    }
+    &-txt{
+        display: block;
+        width: 90%;
+        max-width: 31.25rem;
+        margin: 0 auto;
+        line-height: 2;
+        &-ttl{
+            font-size: .9375rem;
+            letter-spacing: .15rem;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        &-word{
+            margin: 17px 0 30px;
+            font-size: .65rem;
+            letter-spacing: .1rem;
+        }
+    }
 }
 .culture{
-    display: none;
+    position: relative;
+    margin-top: 110px;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        width: 100%;
+        height: calc(100% - 80px);
+        background-color: $grey;
+    }
+    &-wrapper{
+        position: relative;
+        width: 87.5%;
+        max-width: 35rem;
+        margin: 0 auto;
+        .more-view{
+            bottom: .5rem;
+        }
+    }
+    &-img{
+        box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+    }
+    &-ttl{
+        position: absolute;
+        left: 2rem;
+        top: -3.65rem;
+        width: 8.4375rem;
+        height: 3.75rem;
+        path{
+            fill: $ttl;
+        }
+    }
+    &-txt{
+        display: block;
+        width: 90%;
+        max-width: 31.25rem;
+        margin: 0 auto;
+        line-height: 2;
+        &-ttl{
+            font-size: .9375rem;
+            letter-spacing: .15rem;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        &-word{
+            margin: 17px 0 30px;
+            font-size: .65rem;
+            letter-spacing: .1rem;
+        }
+    }
 }
 .entry{
     display: none;
@@ -1182,6 +1284,98 @@ body{
             }
             p{
                 font-size: .75rem;
+            }
+        }
+    }
+    .crosstalk{
+        margin-top: 400px;
+        padding: 0 6.25%;
+        &::before{
+            top: 0;
+            left: auto;
+            right: 0;
+            width: 85%;
+            height: calc(100% - 90px);
+        }
+        &-wrapper{
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            width: 100%;
+            max-width: none;
+            .more-view{
+                margin: 0;
+                bottom: 0;
+            }
+        }
+        &-img{
+            margin-top: 75px;
+            width: 62.5%;
+            height: auto;
+        }
+        &-ttl{
+            position: relative;
+            top: -3.5rem;
+            left: -1.25rem;
+            width: 16.5625rem;
+            height: 15.625rem;
+        }
+        &-txt{
+            width: 31.5%;
+            max-width: none;
+            margin: 0;
+            &-ttl{
+                margin-top: -45px;
+                font-size: 1.4375rem;
+            }
+            &-word{
+                font-size: .9275rem;
+                margin-top: 30px;
+                line-height: 1.65;
+            }
+        }
+    }
+    .culture{
+        margin-top: 145px;
+        padding-left: 6.25%;
+        &::before{
+            top: 60px;
+            width: 85%;
+            height: calc(100% + 25px);
+        }
+        &-wrapper{
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 0;
+            width: 100%;
+            max-width: none;
+            .more-view{
+                margin: 0;
+                bottom: 0;
+            }
+        }
+        &-img{
+            width: 65%;
+            height: auto;
+        }
+        &-ttl{
+            position: relative;
+            top: -.5rem;
+            left: -1.25rem;
+            width: 18.75rem;
+            height: 8.125rem;
+        }
+        &-txt{
+            width: 31.5%;
+            max-width: none;
+            margin: 0;
+            &-ttl{
+                font-size: 1.4375rem;
+            }
+            &-word{
+                font-size: .9275rem;
+                margin-top: 30px;
+                line-height: 1.65;
             }
         }
     }
