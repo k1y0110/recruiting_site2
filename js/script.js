@@ -75,3 +75,7 @@ $(".header-nav-open").on("click",function(){
   $('.header-nav-move').toggleClass('open');
   $('.header-recruit').toggleClass('open');
 });
+
+$(".t-btn").on("click",function(){
+  $('body, html').animate({ scrollTop: 0 }, 1000);
+});

@@ -227,6 +227,7 @@ body {
   background-color: #fff;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  opacity: 0;
   pointer-events: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -234,6 +235,7 @@ body {
 .header-pc.open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  opacity: 1;
   pointer-events: all;
 }
 .header-nav, .header-recruit {
@@ -463,6 +465,7 @@ body {
   letter-spacing: 0.1rem;
 }
 .fv-swiper {
+  overflow: hidden;
   height: 100vh;
 }
 .fv-swiper-slide {
@@ -812,6 +815,9 @@ body {
   font-size: 0.65rem;
   letter-spacing: 0.1rem;
 }
+.person-swiper {
+  overflow: hidden;
+}
 .person-swiper-slide {
   width: 78.125%;
   max-width: 500px;
@@ -1065,6 +1071,96 @@ body {
   background-color: #32aaff;
 }
 
+.t-btn {
+  cursor: default;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  bottom: auto;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 999px;
+  background-color: #fff;
+  color: #0179BF;
+}
+
+.footer {
+  position: relative;
+  display: block;
+  text-align: center;
+  background-color: #202122;
+  color: #fff;
+}
+.footer-txt {
+  padding-top: 50px;
+}
+.footer-txt svg {
+  width: 11.875rem;
+  height: 1rem;
+}
+.footer-txt svg path {
+  fill: #fff;
+}
+.footer-txt p {
+  margin: 5px auto 100px;
+  font-size: 0.625rem;
+  letter-spacing: 0.1rem;
+  font-weight: 100;
+}
+.footer-border {
+  width: 90%;
+  max-width: 630px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #353535;
+}
+.footer-nav-list li {
+  display: block;
+  margin: 20px auto;
+  font-size: 0.625rem;
+  letter-spacing: 0.05rem;
+  color: #d3d3d3;
+}
+.footer-nav-list li a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.footer-nav-list li a:hover {
+  color: #fff;
+}
+.footer .cs-link {
+  display: block;
+  margin: 20px auto;
+  font-size: 0.5rem;
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.footer .cs-link:hover {
+  color: #8b8b8c;
+}
+.footer small {
+  display: block;
+  width: 100%;
+  font-size: 0.5rem;
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+  line-height: 55px;
+  background-color: #353535;
+}
+
 @media screen and (min-width: 1025px) {
   .pc-item {
     display: block;
@@ -1094,6 +1190,7 @@ body {
   }
   .header-pc {
     position: static;
+    opacity: 1;
     pointer-events: all;
     padding-top: 18px;
     -webkit-transform: none;
@@ -1486,6 +1583,9 @@ body {
     line-height: 1.65;
     margin-top: 30px;
   }
+  .person-swiper {
+    overflow: visible;
+  }
   .person-swiper-slide {
     width: 33.33%;
     max-width: none;
@@ -1672,5 +1772,67 @@ body {
   }
   .entry-wrapper h2 {
     font-size: 1.25rem;
+  }
+  .t-btn {
+    display: none;
+  }
+  .footer-txt {
+    padding-top: 75px;
+  }
+  .footer-txt svg {
+    width: 21.875rem;
+    height: 1.875rem;
+  }
+  .footer-txt p {
+    margin: 10px auto 130px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+    font-weight: 200;
+  }
+  .footer-border {
+    width: 100%;
+    max-width: none;
+  }
+  .footer-nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-nav-list li {
+    margin: 0;
+    padding: 30px;
+    font-size: 0.75rem;
+  }
+  .footer-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 4% 0;
+    height: 5.625rem;
+  }
+  .footer-bottom .cs-link {
+    margin: 0;
+    font-size: 0.6875rem;
+    font-weight: 200;
+    line-height: 2;
+    letter-spacing: 0.15rem;
+  }
+  .footer-bottom small {
+    width: auto;
+    font-size: 0.6875rem;
+    font-weight: 200;
+    line-height: 2;
+    letter-spacing: 0.15rem;
+    background-color: #202122;
+    color: #969696;
   }
 }/*# sourceMappingURL=style.css.map */
